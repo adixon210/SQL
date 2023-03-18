@@ -1,0 +1,20 @@
+--create a store dateabase
+
+CREATE TABLE The_Bean (id INTEGER PRIMARY KEY, coffee TEXT, price REAL, quantity INTEGER, roast TEXT);
+INSERT INTO the_bean VALUES (1, "Caramel creme", 4.50,  5, "light");
+INSERT INTO the_bean VALUES (2, "Honey Bear", 3.75, 2, "medium");
+INSERT INTO the_bean VALUES (3, "Mexican Mocha", 4.75, 7, "light");
+INSERT INTO the_bean VALUES (4, "Hott Toddy", 2.00, 3, "dark");
+INSERT INTO the_bean VALUES (5, "Melty Mocha", 5.25, 1, "dark");
+SELECT * FROM The_Bean ORDER BY price DESC;
+
+--dispaly the database ordered by price.
+SELECT * FROM the_bean
+ORDER BY price desc; 
+
+--what are the most 5 popular items? 
+SELECT coffee, price, quantity
+FROM the_bean
+order by quantity desc
+limit 5; 
+
